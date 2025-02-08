@@ -6,7 +6,7 @@ pySQLPlus - simple lib for querying to AspenTech Infoplus.21 database. The nativ
 
 ## Usage
 
-`
+```
 import sqlplus
 s = sqlplus.SQLplus('INFO',10014)
 query = "SELECT TS_START, AVG FROM aggregates WHERE name='00AAA01CT001:av' AND 
@@ -15,7 +15,7 @@ code, length, res = s.query(query.encode())
 if (code!=sqlplus.SQLPLUS_SUCCESS): 
   raise Exception("Query error {}: {}".format(code,res))
 print(res.decode())
-`
+```
 
 
 ## Protocol decription
